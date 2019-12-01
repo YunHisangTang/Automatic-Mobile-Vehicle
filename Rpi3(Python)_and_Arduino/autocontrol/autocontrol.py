@@ -67,7 +67,7 @@ def mongodb_query():
     global orders_date
     # MongoDB登入
     # ShoppingCart Cluster
-    client = pymongo.MongoClient("mongodb+srv://test190520:test190520@cluster0-gzdzv.azure.mongodb.net/test?retryWrites=true")
+    client = pymongo.MongoClient("mongodb+srv://?(yourset):?(yourset)@cluster0-gzdzv.azure.mongodb.net/test?retryWrites=true")
     # DataBase "test"
     db = client.test
     # 表單 orders、users
@@ -149,7 +149,7 @@ def Go_to_house():
     Collection_orders.update_one({'orderdate': orders_date},{'$set':order_state_update})
     nowstate=db_state_2[1]
 
-def Ready_notice_email(gmail_user = 'ji3941u4ul6@gmail.com',gmail_password = 'xj4vm,3fu6'):
+def Ready_notice_email(gmail_user = 'your-email',gmail_password = 'your-password'):
     global color_object
     global orders_date
     # your gmail password
@@ -169,7 +169,7 @@ def Ready_notice_email(gmail_user = 'ji3941u4ul6@gmail.com',gmail_password = 'xj
     
     
 
-def Arrived_notice_email(gmail_user = 'ji3941u4ul6@gmail.com',gmail_password = 'xj4vm,3fu6'):
+def Arrived_notice_email(gmail_user = 'your-email',gmail_password = 'your-password'):
     global Collection_orders
     global color_object
     global nowstate
