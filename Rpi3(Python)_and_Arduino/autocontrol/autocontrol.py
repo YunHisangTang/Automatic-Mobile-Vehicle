@@ -101,7 +101,6 @@ def mongodb_query():
         # User email
         user_email = list(Collection_users.find({"_id": ObjectId(user)}))[0]["email"]
         # print(type(user_email))
-        # auroral.13king518@gmail.com
         return db_state_2[1]
 
     ordercount = len(list(Collection_orders.find({'state':db_state_2[0]})))
@@ -132,7 +131,6 @@ def mongodb_query():
         # User email
         user_email = list(Collection_users.find({"_id": ObjectId(user)}))[0]["email"]
         # print(type(user_email))
-        # auroral.13king518@gmail.com
         return db_state_2[0]
 
 def Go_to_house():
